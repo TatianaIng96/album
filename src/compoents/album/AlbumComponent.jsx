@@ -1,30 +1,43 @@
 import './AlbumComponent.css'
-import React, { useState } from 'react';
+import { useState } from 'react'
+import SongComponent from '../song/SongComponent'
+import song from '../data'
 
-const AlbumComponent = (props) => {
+const AlbumComponent = () => {
+  
+  const [Song, setSong] = useState(song);
 
-return (
-  <>
-    <div className="card">
-      <img src={props.image} />
-      <div className='card__info'> 
-        <h1 className='name'>{props.name}</h1> 
-        <h3 className='artista'>{props.artist}</h3>
-        <h2 className='album'>{props.album}</h2>
-        <h2 className='year'>({props.year})</h2>
-        <div>
-          <button className='genre'>{props.genre}</button>
-          <div className='like-button'>
-            <button  className={`like-button ${props.like ? 'liked' : ''}`} onClick={props.handleLike}>
-              {props.like ? '❤️' : '♡'}
-            </button>
-          </div>
+  const handleLike = (songId) => {
+    setSong(
+        Song.map(item =>
+        item.id === songId ? { ...item, like: !item.like } : item
+      ) 
+    );
+  };
+
+
+  return (
+    <>
+      <h2 className='h2__mode'>Lista de canciones</h2>
+      <div className='box'>
+        <div className='box-container'>
+          { Song.map((item) => (
+            <li key={item.id}>{
+              <SongComponent
+                id={item.id} 
+                image={item.cover_url} 
+                name={item.name} artist={item.artist} 
+                album={item.album} 
+                year={item.year} 
+                like={item.like} 
+                genre={item.genre} 
+                handleLike ={handleLike}/>
+            }</li>
+          ))}
         </div>
-        
       </div>
-    </div>
-  </>
-)
+    </>
+  )
 }
 
 export default AlbumComponent

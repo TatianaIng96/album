@@ -1,0 +1,88 @@
+.card {
+    display: flex;
+    align-items: center;
+    width: 750px;
+    height: 300px;
+    padding: 0px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow:
+        inset 0 0  0 2px rgb(255,255,255),
+            0.3em 0.3em 1em rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+
+
+img {
+    width: 315px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.name {
+    margin-top: -10%;
+    margin-left: 8%;
+}
+
+.artista {
+    margin-top: -6%;
+    margin-left: 8%;
+    font-family: cursive;
+    color: rgb(166, 161, 161);
+}
+
+.album {
+    color: rgb(131, 125, 125);
+    margin-top: 5px;
+    margin-left: 8%;
+}
+
+.year {
+    color: rgb(171, 165, 165);
+    margin-top: -18px;
+    margin-left: 8%;
+}
+.card__info {
+    flex: 1;
+    margin: 5px;
+}
+
+.genre{
+    background: #f8c0c5;
+    justify-content: start;
+    margin-top: 30px;
+    border-radius: 200px;
+    color: black;
+    margin-left: 8%;
+}
+
+button {
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    background: rgb(30, 29, 29);
+    border: 1px solid transparent;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    color: black;
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 40px;
+    justify-content: flex-end;
+    display: flex;
+    margin: -2.3rem;
+    padding-right: 3.7rem;
+  }
+  .like-button.liked {
+    color:red
+  }
+  

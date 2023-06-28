@@ -1,14 +1,41 @@
-.box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: red;
-    justify-content: space-around;
+#root {
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.card{ 
-    position: absolute;
+.h1__mode{
+  color: white;
+  text-align: center;
+  font-size: 50px;
 }
-.card2 {
-    position: absolute;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
 }
