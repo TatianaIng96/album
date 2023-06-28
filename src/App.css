@@ -1,0 +1,14 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: red;
+    justify-content: space-around;
+}
+
+.card{ 
+    position: absolute;
+}
+.card2 {
+    position: absolute;
+}
